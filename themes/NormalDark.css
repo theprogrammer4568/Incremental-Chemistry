@@ -1,0 +1,175 @@
+body
+{
+	height: 100%;
+    overflow: hidden;
+
+	background-color: #1e1e1e;
+}
+
+html
+{
+	height: 100%;
+    overflow: hidden;
+}
+
+#upquarks
+{
+	transition-duration: 0.4s;
+	color: #ffffff;
+	text-align: center;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+#downquarks
+{
+	transition-duration: 0.4s;
+	color: #ffffff;
+	text-align: center;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+#pps
+{
+	transition-duration: 0.4s;
+	color: #ffffff;
+	text-align: center;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+#notif
+{
+	position: absolute;
+
+	border: 5px solid #5c43d8;
+	opacity: 0;
+
+	transition-duration: 0.4s;
+
+	color: #ffffff;
+	text-align: center;
+	font-family: Arial;
+
+	height: 2.5%;
+	width: 50%;
+
+	top: 85%;
+	left: 25%;
+}
+
+#generator
+{
+	position: absolute;
+
+	color: #ffffff;
+
+	transition-duration: 0.4s;
+	background-color: #1e1e1e;
+	border: 5px dashed #59d843;
+
+
+	height: 10%;
+	width: 10%;
+
+	top: 91%;
+  	left: 35%;
+}
+
+#generator:hover
+{
+	background-color: #59d843;
+}
+
+#production
+{
+	position: absolute;
+
+	color: #ffffff;
+
+	transition-duration: 0.4s;
+	background-color: #1e1e1e;
+	border: 5px dashed #d88143;
+
+	height: 10%;
+	width: 10%;
+
+	top: 91%;
+  	left: 45%;
+}
+
+#production:hover
+{
+	background-color: #d88143;
+}
+
+#settings
+{
+	position: absolute;
+
+	color: #ffffff;
+
+	transition-duration: 0.4s;
+	background-color: #1e1e1e;
+	border: 5px dashed #d84343;
+
+	height: 10%;
+	width: 10%;
+
+	top: 91%;
+  	left: 55%;
+}
+
+#settings:hover
+{
+	background-color: #d84343;
+}
+
+#exportsav
+{
+	position: absolute;
+
+	color: #ffffff;
+
+	opacity: 0;
+
+	transition-duration: 0.4s;
+	background-color: #1e1e1e;
+	border: 5px dashed #d8bf43;
+
+	height: 10%;
+	width: 10%;
+
+	top: 5%;
+  	left: 45%;
+}
+
+#exportsav:hover
+{
+	background-color: #d8bf43;
+}
+
+#importsav
+{
+	position: absolute;
+
+	color: #ffffff;
+
+	opacity: 0;
+
+	transition-duration: 0.4s;
+	background-color: #1e1e1e;
+	border: 5px dashed #4375d8;
+
+	height: 10%;
+	width: 10%;
+
+	top: 15%;
+  	left: 45%;
+}
+
+#importsav:hover
+{
+	background-color: #4375d8;
+}

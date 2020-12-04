@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Incremental Chemistry</title>
+
+		<link rel="stylesheet" href="themes/NormalDark.css"/>
+
+		<script src="javascript/Game.js"></script>
+		<script src="javascript/ManageSaveFiles.js"></script>
+		<script src="javascript/GUI.js"></script>
+	</head>
+	<body onload="Init()">
+		<div id="notif"></div>
+
+		<p id="upquarks" class="production"></p>
+		<p id="downquarks" class="production"></p>
+		<p id="pps" class="production"></p>
+
+		<button id="generator" onclick="GeneratorOpen()">Generator</button>
+
+		<button id="production" onclick="ProductionOpen()">Production</button>
+
+		<button id="settings" onclick="SettingsOpen()">Settings</button>
+
+		<button id="exportsav" class="settings" onclick="ExportSaveFile()">Export save file</button>
+
+		<button id="importsav" class="settings" onclick="ImportSaveFile(prompt('Import your save file here.'))">Import save file</button>
+	</body>
+</html>
