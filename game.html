@@ -4,26 +4,28 @@
 		<title>Incremental Chemistry</title>
 
 		<link rel="stylesheet" href="themes/NormalDark.css"/>
-
-		<script src="javascript/Game.js"></script>
-		<script src="javascript/ManageSaveFiles.js"></script>
-		<script src="javascript/GUI.js"></script>
 	</head>
-	<body onload="Init()">
+	<body>
 		<div id="notif"></div>
 
-		<p id="upquarks" class="production"></p>
-		<p id="downquarks" class="production"></p>
-		<p id="pps" class="production"></p>
-
-		<button id="generator" onclick="GeneratorOpen()">Generator</button>
+		<button id="upgrades" onclick="UpgradesOpen()">Upgrades</button>
 
 		<button id="production" onclick="ProductionOpen()">Production</button>
 
 		<button id="settings" onclick="SettingsOpen()">Settings</button>
 
-		<button id="exportsav" class="settings" onclick="ExportSaveFile()">Export save file</button>
+		<button id="upgradedqpro" class="upgrades" onclick="UpgradeDQPro()">Upgrade down quark production</button>
 
-		<button id="importsav" class="settings" onclick="ImportSaveFile(prompt('Import your save file here.'))">Import save file</button>
+		<p id="upquarks" class="production"></p>
+		<p id="downquarks" class="production"></p>
+
+		<button id="exportsave" class="settings" onclick="ExportSaveFile()">Export save file</button>
+
+		<button id="importsave" class="settings" onclick="ImportSaveFile(prompt('Import your save file here.'), 'Successfully imported save file.')">Import save file</button>
+
+		<button id="deletesave" class="settings" onclick="DeleteSaveFile()">Delete save file</button>
 	</body>
+		<script src="javascript/ManageSaveFiles.js"></script>
+		<script src="javascript/GUI.js"></script>
+		<script src="javascript/Game.js"></script>
 </html>

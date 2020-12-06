@@ -12,33 +12,6 @@ html
     overflow: hidden;
 }
 
-#upquarks
-{
-	transition-duration: 0.4s;
-	color: #ffffff;
-	text-align: center;
-	font-size: 30px;
-	font-family: Arial;
-}
-
-#downquarks
-{
-	transition-duration: 0.4s;
-	color: #ffffff;
-	text-align: center;
-	font-size: 30px;
-	font-family: Arial;
-}
-
-#pps
-{
-	transition-duration: 0.4s;
-	color: #ffffff;
-	text-align: center;
-	font-size: 30px;
-	font-family: Arial;
-}
-
 #notif
 {
 	position: absolute;
@@ -46,8 +19,7 @@ html
 	border: 5px solid #5c43d8;
 	opacity: 0;
 
-	transition-duration: 0.4s;
-
+	transition-duration: 0.5s;
 	color: #ffffff;
 	text-align: center;
 	font-family: Arial;
@@ -59,13 +31,13 @@ html
 	left: 25%;
 }
 
-#generator
+#upgrades
 {
 	position: absolute;
 
 	color: #ffffff;
 
-	transition-duration: 0.4s;
+	transition-duration: 0.5s;
 	background-color: #1e1e1e;
 	border: 5px dashed #59d843;
 
@@ -73,11 +45,11 @@ html
 	height: 10%;
 	width: 10%;
 
-	top: 91%;
+	top: 90%;
   	left: 35%;
 }
 
-#generator:hover
+#upgrades:hover
 {
 	background-color: #59d843;
 }
@@ -88,14 +60,14 @@ html
 
 	color: #ffffff;
 
-	transition-duration: 0.4s;
+	transition-duration: 0.5s;
 	background-color: #1e1e1e;
 	border: 5px dashed #d88143;
 
 	height: 10%;
 	width: 10%;
 
-	top: 91%;
+	top: 90%;
   	left: 45%;
 }
 
@@ -110,14 +82,14 @@ html
 
 	color: #ffffff;
 
-	transition-duration: 0.4s;
+	transition-duration: 0.5s;
 	background-color: #1e1e1e;
 	border: 5px dashed #d84343;
 
 	height: 10%;
 	width: 10%;
 
-	top: 91%;
+	top: 90%;
   	left: 55%;
 }
 
@@ -126,15 +98,53 @@ html
 	background-color: #d84343;
 }
 
-#exportsav
+#upgradedqpro
 {
 	position: absolute;
 
 	color: #ffffff;
 
-	opacity: 0;
+	transition-duration: 0.5s;
+	background-color: #1e1e1e;
+	border: 5px dashed #8743d9;
 
-	transition-duration: 0.4s;
+	height: 10%;
+	width: 10%;
+
+	top: 5%;
+  	left: 45%;
+}
+
+#upgradedqpro:hover
+{
+	background-color: #8743d9;
+}
+
+#upquarks
+{
+	transition-duration: 0.5s;
+	color: #ffffff;
+	text-align: center;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+#downquarks
+{
+	transition-duration: 0.5s;
+	color: #ffffff;
+	text-align: center;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+#exportsave
+{
+	position: absolute;
+
+	color: #ffffff;
+
+	transition-duration: 0.5s;
 	background-color: #1e1e1e;
 	border: 5px dashed #d8bf43;
 
@@ -145,20 +155,18 @@ html
   	left: 45%;
 }
 
-#exportsav:hover
+#exportsave:hover
 {
 	background-color: #d8bf43;
 }
 
-#importsav
+#importsave
 {
 	position: absolute;
 
 	color: #ffffff;
 
-	opacity: 0;
-
-	transition-duration: 0.4s;
+	transition-duration: 0.5s;
 	background-color: #1e1e1e;
 	border: 5px dashed #4375d8;
 
@@ -169,7 +177,29 @@ html
   	left: 45%;
 }
 
-#importsav:hover
+#importsave:hover
 {
 	background-color: #4375d8;
+}
+
+#deletesave
+{
+	position: absolute;
+
+	color: #ffffff;
+
+	transition-duration: 0.5s;
+	background-color: #1e1e1e;
+	border: 5px dashed #d943d9;
+
+	height: 10%;
+	width: 10%;
+
+	top: 25%;
+  	left: 45%;
+}
+
+#deletesave:hover
+{
+	background-color: #d943d9;
 }

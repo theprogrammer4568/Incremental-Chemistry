@@ -1,72 +1,83 @@
-var ui =
+var gui =
 {
-	generator: document.getElementsByClassName("generator"),
+	upgrades: document.getElementsByClassName("upgrades"),
 	production: document.getElementsByClassName("production"),
 	settings: document.getElementsByClassName("settings"),
 	notif: document.getElementById("notif"),
-	pps: document.getElementById("pps"),
+
 	upquarks: document.getElementById("upquarks"),
-	downquarks: document.getElementById("downquarks"),
+	downquarks: document.getElementById("downquarks")
 };
 
 function ShowNotification(text)
 {
-	ui.notif.style.opacity = 1;
-	ui.notif.innerHTML = text;
+	gui.notif.style.opacity = 1;
+	gui.notif.innerHTML = text;
 
-	setTimeout(function() { uielements.notif.style.opacity = 0; }, 5000);
+	setTimeout(function() { gui.notif.style.opacity = 0; }, 5000);
 }
 
-function GeneratorOpen()
+function UpgradesOpen()
 {
-	for(var i = 0; i < ui.generator.length; i++) 
+	for(var i = 0; i < gui.upgrades.length; i++) 
 	{
-    	ui.generator[i].style.opacity = 1;
+    	gui.upgrades[i].style.opacity = 1;
   	}
 
-	for(var i = 0; i < ui.settings.length; i++) 
+	for(var i = 0; i < gui.settings.length; i++) 
 	{
-    	ui.settings[i].style.opacity = 0;
+    	gui.settings[i].style.opacity = 0;
+    	gui.settings[i].onclick = null;
   	}
 
-  	for(var i = 0; i < ui.production.length; i++) 
+  	for(var i = 0; i < gui.production.length; i++) 
 	{
-    	ui.production[i].style.opacity = 0;
+    	gui.production[i].style.opacity = 0;
   	}
 }
 
 function SettingsOpen()
 {
-	for(var i = 0; i < ui.settings.length; i++) 
+	gui.settings[0].setAttribute("onclick","ExportSaveFile()");
+	gui.settings[1].setAttribute("onclick","ImportSaveFile(prompt('Enter your save file here.'), 'Successfully imported save file.')");
+	gui.settings[2].setAttribute("onclick","DeleteSaveFile()");
+
+	for(var i = 0; i < gui.settings.length; i++) 
 	{
-    	ui.settings[i].style.opacity = 1;
+    	gui.settings[i].style.opacity = 1;
   	}
 
-	for(var i = 0; i < ui.generator.length; i++) 
+	for(var i = 0; i < gui.upgrades.length; i++) 
 	{
-    	ui.generator[i].style.opacity = 0;
+    	gui.upgrades[i].style.opacity = 0;
   	}
 
-  	for(var i = 0; i < ui.production.length; i++) 
+  	for(var i = 0; i < gui.production.length; i++) 
 	{
-    	ui.production[i].style.opacity = 0;
+    	gui.production[i].style.opacity = 0;
   	}
 }
 
 function ProductionOpen()
 {
-	for(var i = 0; i < ui.settings.length; i++) 
+	for(var i = 0; i < gui.settings.length; i++) 
 	{
-    	ui.settings[i].style.opacity = 0;
+    	gui.settings[i].style.opacity = 0;
+    	gui.settings[i].onclick = null;
   	}
 
-	for(var i = 0; i < ui.generator.length; i++) 
+	for(var i = 0; i < gui.upgrades.length; i++) 
 	{
-    	ui.generator[i].style.opacity = 0;
+    	gui.upgrades[i].style.opacity = 0;
   	}
 
-  	for(var i = 0; i < ui.production.length; i++) 
+  	for(var i = 0; i < gui.production.length; i++) 
 	{
-    	ui.production[i].style.opacity = 1;
+    	gui.production[i].style.opacity = 1;
   	}
+}
+
+function UpgradeDQPro()
+{
+	game.downquarkpro += 0.001;
 }

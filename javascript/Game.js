@@ -11,24 +11,33 @@ var game =
 
 function GameLoop()
 {
-	ui.pps.innerHTML = "You are gaining " + game.upquarkpro + " up quarks per second.";
-	ui.upquarks.innerHTML = game.upquark + " up quarks";
-	ui.downquarks.innerHTML = game.downquark + " down quarks";
+	gui.upquarks.innerHTML = game.upquark + game.particle;
+	gui.downquarks.innerHTML = game.downquark + " down quarks";
 
-	game.frame++;
+	//Auto save every 10 seconds
+	if(game.frame % (10000 / game.refreshrate) == 0 && game.frame != 0)
+	{
+		game.frame = 0;
+		ImportSaveFile(btoa(JSON.stringify(game)), "Successfully saved game.");
+	}
 
-	if(game.frame == 1000 / game.refreshrate)
+	//Increase currency every second
+	if(game.frame % (1000 / game.refreshrate) == 0)
 	{
 		game.upquark += game.upquarkpro;
 		game.downquark += game.downquarkpro;
-		game.frame = 1;
 
 		game.upquark = Math.round(game.upquark * 100) / 100;
-		game.downquark = Math.round(game.downquark * 100) / 1000;
+		game.downquark = Math.round(game.downquark * 1000) / 1000;
 	}
+
+	game.frame++;
 }
 
-function Init()
+document.addEventListener("DOMContentLoaded", function(event)
 {
+	CheckSave();
+	ProductionOpen();
+
 	setInterval(GameLoop, 50);
-}
+})
