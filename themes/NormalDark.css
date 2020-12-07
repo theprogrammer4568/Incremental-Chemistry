@@ -120,6 +120,50 @@ html
 	background-color: #8743d9;
 }
 
+#upgradecp
+{
+	position: absolute;
+
+	color: #ffffff;
+
+	transition-duration: 0.5s;
+	background-color: #1e1e1e;
+	border: 5px dashed #8743d9;
+
+	height: 10%;
+	width: 10%;
+
+	top: 15%;
+  	left: 45%;
+}
+
+#upgradecp:hover
+{
+	background-color: #8743d9;
+}
+
+#upgradecn
+{
+	position: absolute;
+
+	color: #ffffff;
+
+	transition-duration: 0.5s;
+	background-color: #1e1e1e;
+	border: 5px dashed #8743d9;
+
+	height: 10%;
+	width: 10%;
+
+	top: 25%;
+  	left: 45%;
+}
+
+#upgradecn:hover
+{
+	background-color: #8743d9;
+}
+
 #upquarks
 {
 	transition-duration: 0.5s;

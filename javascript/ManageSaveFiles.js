@@ -45,6 +45,7 @@ function DeleteSaveFile()
 
 	if(confir == true)
 	{
+		game.deletion = true;
 		localStorage.setItem("ICSave", null);
 		ShowNotification("Successfully deleted save file. The game will now reload in 5 seconds.");
 

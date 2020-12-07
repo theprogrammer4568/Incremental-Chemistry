@@ -3,10 +3,16 @@ var gui =
 	upgrades: document.getElementsByClassName("upgrades"),
 	production: document.getElementsByClassName("production"),
 	settings: document.getElementsByClassName("settings"),
+
+	upgradesid: document.getElementById("upgrades"),
+	productionid: document.getElementById("production"),
+	settingsid: document.getElementById("settings"),
+
 	notif: document.getElementById("notif"),
 
 	upquarks: document.getElementById("upquarks"),
-	downquarks: document.getElementById("downquarks")
+	downquarks: document.getElementById("downquarks"),
+	upgradedqpro: document.getElementById("upgradedqpro")
 };
 
 function ShowNotification(text)
@@ -79,5 +85,9 @@ function ProductionOpen()
 
 function UpgradeDQPro()
 {
-	game.downquarkpro += 0.001;
+	if(game.upquark >= 1)
+	{
+		game.upquark -= 1;
+		game.downquarkpro += 0.001;
+	}
 }

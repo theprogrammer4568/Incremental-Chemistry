@@ -2,6 +2,7 @@ var game =
 {
 	frame: 1,
 	refreshrate: 50,
+	deletion: false,
 	particle: " up quarks",
 	upquark: 0,
 	upquarkpro: 0.01,
@@ -15,7 +16,7 @@ function GameLoop()
 	gui.downquarks.innerHTML = game.downquark + " down quarks";
 
 	//Auto save every 10 seconds
-	if(game.frame % (10000 / game.refreshrate) == 0 && game.frame != 0)
+	if(game.frame % (10000 / game.refreshrate) == 0 && game.frame != 0 && game.deletion == false)
 	{
 		game.frame = 0;
 		ImportSaveFile(btoa(JSON.stringify(game)), "Successfully saved game.");
