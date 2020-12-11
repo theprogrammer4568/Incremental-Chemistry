@@ -16,12 +16,19 @@
 
 		<button id="upgradedqpro" class="upgrades" onclick="UpgradeDQPro()">Upgrade down quark production</button>
 
-		<button id="upgradecp" class="upgrades" onclick="UpgradeCP()">Create a proton</button>
+		<button id="upgradecp" class="upgrades" onclick="UpgradeCP()">Create a proton<br/>Cost: 1 up quark and 2 down quarks</button>
 
-		<button id="upgradecn" class="upgrades" onclick="UpgradeCN()">Create a neutron</button>
+		<button id="upgradecn" class="upgrades" onclick="UpgradeCN()">Create a neutron<br/>Cost: 2 up quark and 1 down quarks</button>
+
+		<button id="upgradecg" class="upgrades" onclick="UpgradeCG()">Create a gluon<br/>Cost: 1 up quark and 1 down quarks</button>
+
+		<button id="upgrademax" class="upgrades" onclick="UpgradeMax()">Buy 1</button>
 
 		<p id="upquarks" class="production"></p>
 		<p id="downquarks" class="production"></p>
+		<p id="protons" class="production"></p>
+		<p id="neutrons" class="production"></p>
+		<p id="gluons" class="production"></p>
 
 		<button id="exportsave" class="settings" onclick="ExportSaveFile()">Export save file</button>
 

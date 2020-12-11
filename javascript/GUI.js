@@ -3,16 +3,16 @@ var gui =
 	upgrades: document.getElementsByClassName("upgrades"),
 	production: document.getElementsByClassName("production"),
 	settings: document.getElementsByClassName("settings"),
-
-	upgradesid: document.getElementById("upgrades"),
-	productionid: document.getElementById("production"),
-	settingsid: document.getElementById("settings"),
-
 	notif: document.getElementById("notif"),
+
+	upgrademax: document.getElementById("upgrademax"),
+	upgradedqpro: document.getElementById("upgradedqpro"),
 
 	upquarks: document.getElementById("upquarks"),
 	downquarks: document.getElementById("downquarks"),
-	upgradedqpro: document.getElementById("upgradedqpro")
+	protons: document.getElementById("protons"),
+	neutrons: document.getElementById("neutrons"),
+	gluons: document.getElementById("gluons")
 };
 
 function ShowNotification(text)
@@ -28,17 +28,20 @@ function UpgradesOpen()
 	for(var i = 0; i < gui.upgrades.length; i++) 
 	{
     	gui.upgrades[i].style.opacity = 1;
+    	gui.upgrades[i].style.visibility = "visible";
   	}
 
 	for(var i = 0; i < gui.settings.length; i++) 
 	{
     	gui.settings[i].style.opacity = 0;
     	gui.settings[i].onclick = null;
+    	gui.settings[i].style.visibility = "hidden";
   	}
 
   	for(var i = 0; i < gui.production.length; i++) 
 	{
     	gui.production[i].style.opacity = 0;
+    	gui.production[i].style.visibility = "hidden";
   	}
 }
 
@@ -51,16 +54,19 @@ function SettingsOpen()
 	for(var i = 0; i < gui.settings.length; i++) 
 	{
     	gui.settings[i].style.opacity = 1;
+    	gui.settings[i].style.visibility = "visible";
   	}
 
 	for(var i = 0; i < gui.upgrades.length; i++) 
 	{
     	gui.upgrades[i].style.opacity = 0;
+    	gui.upgrades[i].style.visibility = "hidden";
   	}
 
   	for(var i = 0; i < gui.production.length; i++) 
 	{
     	gui.production[i].style.opacity = 0;
+    	gui.production[i].style.visibility = "hidden";
   	}
 }
 
@@ -80,14 +86,6 @@ function ProductionOpen()
   	for(var i = 0; i < gui.production.length; i++) 
 	{
     	gui.production[i].style.opacity = 1;
+    	gui.production[i].style.visibility = "visible";
   	}
-}
-
-function UpgradeDQPro()
-{
-	if(game.upquark >= 1)
-	{
-		game.upquark -= 1;
-		game.downquarkpro += 0.001;
-	}
 }

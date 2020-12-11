@@ -159,6 +159,23 @@ html
   	left: 45%;
 }
 
+#upgradecg
+{
+	position: absolute;
+
+	color: #ffffff;
+
+	transition-duration: 0.5s;
+	background-color: #1e1e1e;
+	border: 5px dashed #8743d9;
+
+	height: 10%;
+	width: 10%;
+
+	top: 35%;
+  	left: 45%;
+}
+
 #upgradecn:hover
 {
 	background-color: #8743d9;
@@ -174,6 +191,33 @@ html
 }
 
 #downquarks
+{
+	transition-duration: 0.5s;
+	color: #ffffff;
+	text-align: center;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+#protons
+{
+	transition-duration: 0.5s;
+	color: #ffffff;
+	text-align: center;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+#neutrons
+{
+	transition-duration: 0.5s;
+	color: #ffffff;
+	text-align: center;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+#gluons
 {
 	transition-duration: 0.5s;
 	color: #ffffff;

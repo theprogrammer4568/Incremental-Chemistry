@@ -3,17 +3,26 @@ var game =
 	frame: 1,
 	refreshrate: 50,
 	deletion: false,
-	particle: " up quarks",
+	buyamount: "1",
 	upquark: 0,
 	upquarkpro: 0.01,
 	downquark: 0,
-	downquarkpro: 0.001
+	downquarkpro: 0.001,
+	proton: 0,
+	neutron: 0,
+	gluon: 0
 };
 
 function GameLoop()
 {
-	gui.upquarks.innerHTML = game.upquark + game.particle;
+	gui.upgrademax.innerHTML = "Buy " + game.buyamount;
+	gui.upquarks.innerHTML = game.upquark + " up quarks";
 	gui.downquarks.innerHTML = game.downquark + " down quarks";
+
+	gui.upgradedqpro.innerHTML = "Upgrade down quark production\nCost: 1 up quark";
+	gui.protons.innerHTML = game.proton + " protons";
+	gui.neutrons.innerHTML = game.neutron + " neutrons";
+	gui.gluons.innerHTML = game.gluon + " gluons";
 
 	//Auto save every 10 seconds
 	if(game.frame % (10000 / game.refreshrate) == 0 && game.frame != 0 && game.deletion == false)
@@ -27,6 +36,7 @@ function GameLoop()
 	{
 		game.upquark += game.upquarkpro;
 		game.downquark += game.downquarkpro;
+		game.upquarkpro += game.proton / 20;
 
 		game.upquark = Math.round(game.upquark * 100) / 100;
 		game.downquark = Math.round(game.downquark * 1000) / 1000;
